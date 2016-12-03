@@ -59,7 +59,7 @@ export default class Slider extends Component {
         const position=e.touches[0].pageX;
         this.onMove(e,position-this.dragOffset);
     }
-    mouseDown(e) {debugger;
+    mouseDown(e) {
         if (e.button !== 0) {
             return
         };
@@ -176,6 +176,10 @@ export default class Slider extends Component {
     }
     noop(){
         
+    }
+    componentWillReceiveProps(nextProps){
+        if(!("value"in nextProps||"min" in nextProps||"max" in nextProps)){return;}
+        nextProps.value!==this.props.value&& this.setState({value:this.props.value});
     }
     render() {
         const {value} = this.state;
