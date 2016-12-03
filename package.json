@@ -1,14 +1,15 @@
 {
-  "name": "picker-xc",
+  "name": "react-range-xc",
   "version": "1.0.0",
   "description": "this is a picker has selector time date",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --line --hot --progress"
+    "start": "webpack-dev-server --line --hot --progress",
+    "build":"webpack"  
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XcXerxes/picker-xc.git"
+    "url": "git+https://github.com/XcXerxes/react-range.git"
   },
   "keywords": [
     "picker"
@@ -16,9 +17,9 @@
   "author": "xcxerxes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/XcXerxes/picker-xc/issues"
+    "url": "https://github.com/XcXerxes/react-range/issues"
   },
-  "homepage": "https://github.com/XcXerxes/picker-xc#readme",
+  "homepage": "https://github.com/XcXerxes/react-range#readme",
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
