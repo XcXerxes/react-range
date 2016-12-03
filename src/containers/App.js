@@ -32,7 +32,7 @@ export default class App extends Component{
                 <section className="slider">
                     <div className="basic-slider">
                         <h2>不显示值,最小值50,最大值400，当前值60</h2>
-                        <Slider min="50" max="400" value="60" />
+                        <Slider min="50" max="2000" value="60" />
                     </div>
                 </section>
             </div>

@@ -59,7 +59,7 @@ export default class Slider extends Component {
         const position=e.touches[0].pageX;
         this.onMove(e,position-this.dragOffset);
     }
-    mouseDown(e) {
+    mouseDown(e) {debugger;
         if (e.button !== 0) {
             return
         };
@@ -90,7 +90,6 @@ export default class Slider extends Component {
             value: value
         });
         if(this.props.onChange){
-            debugger;
             e.target.value=value;
             return this.props.onChange(e)
         }
@@ -105,14 +104,11 @@ export default class Slider extends Component {
         return coords.left + (coords.width * 0.5); //计算元素左边距离页面左边的距离和
     }
     
-    onStart(position) {debugger;
+    onStart(position) {
             const {max,min}=this.props;
             let value = this.verifyValue(this.calcValueByPos(position));
             this.startValue = value;
             this.startPosition = position;
-            this.setState({
-                value: value
-            });
         }
     //验证值的有效范围
     verifyValue(val){
@@ -171,9 +167,9 @@ export default class Slider extends Component {
         return ratio * 100;
     }
     toBoolean(value){
-        if(value===undefined||value===""||value==="false"||value==="null"||value==="undefined"){
+        if(value===undefined||value===""||value==="null"||value==="undefined"){
             return false;
-        }else if(value==="true"){
+        }else if(typeof value==="boolean"){
             return value
         }
         return true

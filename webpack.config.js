@@ -27,16 +27,22 @@ const config={
     devServer:{
       contentBase:"./public"  
     },
-    devtool:isDebug?"source-map":false,
+    devtool:"eval-source-map",
     postcss:[
         require("autoprefixer")({ browsers: ['last 10 versions'] })
     ],
     plugins:[
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.DefinePlugin({
+        new webpack.optimize.UglifyJsPlugin({
+            compress:{
+                warnings:false
+            }
+        }),
+    new webpack.HotModuleReplacementPlugin()
+        /*new webpack.DefinePlugin({
           'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
           __DEV__: isDebug,
-        }),
+        }),*/
     ]
 }
 if(!isDebug){

@@ -37,7 +37,7 @@
     left:0;
     height: 4px;
     border-radius: 6px;
-    background: #abe2fb;
+    background: #00bc12;
 }
 .xc-slider-step{
     position: absolute;
@@ -47,13 +47,14 @@
 }
 .xc-slider-handle{
     position: absolute;
-    width: 14px;
-    height:14px;
+    width: 24px;
+    height:24px;
     cursor:pointer;
-    margin-left:-10px;
-    margin-top:-6px;
+    margin-left:-18px;
+    margin-top:-10px;
     border-radius:50%;
-    border:2px solid #96dbfa;
+    /*border:2px solid #96dbfa;*/
+    box-shadow: 0px 0px 4px #dedede;
     background: #fff;
 }
 
